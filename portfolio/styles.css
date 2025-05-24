@@ -435,7 +435,7 @@ nav {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
+    gap: 50px;
 }
 
 .project-card {
@@ -867,4 +867,93 @@ a[href*="linkedin.com"] {
         max-width: 300px;
         margin: 0 auto;
     }
+}
+/* Add to your styles.css */
+
+/* Animated gradient background for hero */
+.hero {
+    background: linear-gradient(-45deg, #f3f4f6, #e5e7eb, #f9fafb, #f3f4f6);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Circular profile image */
+.about-image img {
+    border-radius: 90%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+}
+
+/* Skill circles alternative */
+.skill-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.skill-circle svg {
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
+}
+
+.skill-circle circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: animate 1.5s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        stroke-dashoffset: var(--offset);
+    }
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+.dark-mode .section-title,
+.dark-mode .hero-title,
+.dark-mode .about-text h3,
+.dark-mode .skill-category h3,
+.dark-mode .project-info h3,
+.dark-mode .contact-info h3 {
+    color: #f8fafc;
+}
+
+/* Project card hover effect */
+.project-card {
+    perspective: 1000px;
+}
+
+.project-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+    transform: rotateY(10deg);
 }
