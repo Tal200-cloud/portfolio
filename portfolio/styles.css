@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
-    --primary-color: #2563eb;
-    --primary-dark: #1d4ed8;
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
     --secondary-color: #7c3aed;
     --dark-color: #1e293b;
     --light-color: #f8fafc;
@@ -12,19 +12,6 @@
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --transition: all 0.3s ease;
-    --bg-color: #fff;
-    --text-color: var(--dark-color);
-    --card-bg: #fff;
-    --border-color: #e2e8f0;
-    --footer-bg: var(--dark-color);
-    --footer-text: white;
-    --input-bg: #fff;
-    --input-border: #cbd5e1;
-    --skill-bar-bg: #e2e8f0;
-}
-
-/* Dark mode variables */
-[data-theme="dark"] {
     --bg-color: #0f172a;
     --text-color: #e2e8f0;
     --card-bg: #1e293b;
@@ -34,8 +21,21 @@
     --input-bg: #1e293b;
     --input-border: #334155;
     --skill-bar-bg: #334155;
-    --primary-color: #3b82f6;
-    --primary-dark: #2563eb;
+}
+
+/* Light mode variables */
+[data-theme="light"] {
+    --bg-color: #fff;
+    --text-color: var(--dark-color);
+    --card-bg: #fff;
+    --border-color: #e2e8f0;
+    --footer-bg: var(--dark-color);
+    --footer-text: white;
+    --input-bg: #fff;
+    --input-border: #cbd5e1;
+    --skill-bar-bg: #e2e8f0;
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
 }
 
 * {
@@ -221,11 +221,13 @@ nav {
     border: none;
     transition: var(--transition);
     margin-left: 20px;
+    border: 1px solid var(--border-color);
 }
 
 .theme-toggle:hover {
     background-color: var(--primary-color);
     color: white;
+    transform: scale(1.1);
 }
 
 .hamburger {
