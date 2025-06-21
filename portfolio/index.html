@@ -13,7 +13,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a src="static/logo.png">Talimon</a>
+                    <a href="#home">Talimon</a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -22,6 +22,9 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
                 <div class="hamburger">
                     <div class="line"></div>
                     <div class="line"></div>
@@ -34,17 +37,18 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content fade-left">
                 <h1 class="hero-title">Hi, I'm <span>Talimon Mwakesi</span></h1>
                 <h2 class="hero-subtitle">Software Engineer</h2>
+                <p class="hero-description">Building digital solutions that bridge technology and business needs with expertise in both software development and financial operations.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image fade-right">
                 <div class="image-wrapper">
-                    <img src="static/talimon.jpeg" alt="Talimon">
+                    <img src="static/talimon.jpeg" alt="Talimon Mwakesi">
                 </div>
             </div>
         </div>
@@ -53,16 +57,17 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title slide-up">About Me</h2>
             <div class="about-content">
-                <div class="image-wrapper">
-                    <img src="static/talimon.jpeg" alt="Talimon">
+                <div class="about-image fade-left">
+                    <div class="image-wrapper">
+                        <img src="static/talimon.jpeg" alt="Talimon Mwakesi">
+                    </div>
                 </div>
-                <div class="about-text">
+                <div class="about-text fade-right">
                     <h3>Who I Am</h3>
-                    <p>I am a passionate and detail-oriented software engineer enthusiast with practical experience in building and supporting applications using Python, Flask, MySQL, PostgreSQL, SQLite, HTML & CSS, and foundational knowledge in JavaScript and C. My technical proficiency allows me to design efficient backend solutions, automate workflows, and support data-driven decision-making processes within operational environments. I am especially adept at integrating software tools to streamline business operations, bridging the gap between technology and organizational needs.</p>
-                    <p>Complementing my technical skill set is a solid foundation in accounting, cost control, store management, receiving and procurement, treasury, and revenue management. I have hands-on experience using enterprise systems such as Sun Accounting System, Material Control System, and Opera System, enabling me to manage financial operations with precision and transparency. My strengths lie in data and record keeping, reconciliation, analytical problem-solving, and purchasing, ensuring that both financial and inventory records align with strategic objectives.</p>
-                    <p>This unique combination of software development capabilities and financial expertise empowers me to contribute effectively to modern, tech-enabled organizations seeking operational efficiency and digital transformation</p>
+                    <p>I am a passionate and detail-oriented software engineer with practical experience in building and supporting applications using Python, Flask, MySQL, PostgreSQL, SQLite, HTML & CSS, and foundational knowledge in JavaScript and C. My technical proficiency allows me to design efficient backend solutions, automate workflows, and support data-driven decision-making processes.</p>
+                    <p>Complementing my technical skill set is a solid foundation in accounting, cost control, and financial management. This unique combination empowers me to contribute effectively to modern, tech-enabled organizations seeking operational efficiency and digital transformation.</p>
                     <div class="about-details">
                         <div class="detail-item">
                             <i class="fas fa-user"></i>
@@ -78,11 +83,7 @@
                         </div>
                         <div class="detail-item">
                             <i class="fas fa-graduation-cap"></i>
-                            <span><strong>Education:</strong> BS in Bachelor in Commerce - Accounting option</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span><strong>Education:</strong> Degree in Computer Science</span>
+                            <span><strong>Education:</strong> BS in Commerce (Accounting)</span>
                         </div>
                     </div>
                     <a href="static/Mwakesi.pdf" class="btn btn-primary">Download CV</a>
@@ -94,9 +95,9 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
+            <h2 class="section-title slide-up">My Skills</h2>
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3>Frontend</h3>
                     <div class="skill-item">
                         <div class="skill-info">
@@ -117,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3>Backend</h3>
                     <div class="skill-item">
                         <div class="skill-info">
@@ -125,7 +126,7 @@
                             <span>80%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-level node"></div>
+                            <div class="skill-level react"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -147,7 +148,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3>Design</h3>
                     <div class="skill-item">
                         <div class="skill-info">
@@ -166,21 +167,21 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-filter">
+            <h2 class="section-title slide-up">My Projects</h2>
+            <div class="projects-filter slide-up">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="frontend">Frontend</button>
                 <button class="filter-btn" data-filter="fullstack">Fullstack</button>
                 <button class="filter-btn" data-filter="design">Design</button>
             </div>
             <div class="projects-grid">
-                <div class="project-card" data-category="fullstack">
+                <div class="project-card fade-in" data-category="fullstack">
                     <div class="project-image">
-                        <img src="static/edusmart.png" alt="Project 1">
+                        <img src="static/edusmart.png" alt="EduSmart Project">
                     </div>
                     <div class="project-info">
                         <h3>EduSmart</h3>
-                        <p>A Fullstack Edutech Platform.</p>
+                        <p>A Fullstack Edutech Platform with user management, course tracking, and interactive learning features.</p>
                         <div class="project-tech">
                             <span>Flask</span>
                             <span>Postgres</span>
@@ -189,17 +190,18 @@
                             <span>JS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://portal-smart.onrender.com/" class="btn btn-small">Live Demo</a>
+                            <a href="https://portal-smart.onrender.com/" class="btn btn-small btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-outline">View Code</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="fullstack">
+                <div class="project-card fade-in" data-category="fullstack">
                     <div class="project-image">
-                        <img src="static/gwu.png" alt="Project 2">
+                        <img src="static/gwu.png" alt="GWU System Project">
                     </div>
                     <div class="project-info">
                         <h3>GWU System</h3>
-                        <p>A Fullstack Attendance Management System.</p>
+                        <p>A comprehensive Attendance Management System with reporting and analytics capabilities.</p>
                         <div class="project-tech">
                             <span>Flask</span>
                             <span>SQlite3</span>
@@ -208,24 +210,26 @@
                             <span>JS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://gwu.onrender.com" class="btn btn-small">Live Demo</a>
+                            <a href="https://gwu.onrender.com" class="btn btn-small btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-outline">View Code</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="frontend">
+                <div class="project-card fade-in" data-category="frontend">
                     <div class="project-image">
-                        <img src="static/algovista.png" alt="Project 3">
+                        <img src="static/algovista.png" alt="AlgoVista Project">
                     </div>
                     <div class="project-info">
-                        <h3>algovista</h3>
-                        <p>A Website for AlgoVista Digital Agency.</p>
+                        <h3>AlgoVista</h3>
+                        <p>A modern website for digital agency with responsive design and smooth animations.</p>
                         <div class="project-tech">
                             <span>CSS</span>
                             <span>HTML</span>
                             <span>JS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://algovista.onrender.com" class="btn btn-small">Live Demo</a>
+                            <a href="https://algovista.onrender.com" class="btn btn-small btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-outline">View Code</a>
                         </div>
                     </div>
                 </div>
@@ -236,9 +240,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title slide-up">Get In Touch</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info fade-left">
                     <h3>Let's Talk</h3>
                     <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
                     <div class="contact-details">
@@ -256,12 +260,12 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/talimon-mwakesi-a52b01337" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://wa.me/qr/7MADDXZXMDE7J1" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/talimon-mwakesi-a52b01337" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/qr/7MADDXZXMDE7J1" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/yourusername" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <!-- Replace the contact form section with this: -->
-                <form class="contact-form" action="https://formsubmit.co/talimonosimel@gmail.com" method="POST">
+                <form class="contact-form fade-right" action="https://formsubmit.co/talimonosimel@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
                         <input autocomplete="off" type="text" name="name" placeholder="Your Name" required>
@@ -277,7 +281,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary">
                         <span class="btn-text">Send Message</span>
-                        <span class="loading-spinner" style="display: none;">
+                        <span class="loading-spinner">
                             <i class="fas fa-spinner fa-spin"></i>
                         </span>
                     </button>
@@ -286,13 +290,12 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <a src="static/logo.png">Talimon</a>
+                    <a href="#home">Talimon</a>
                 </div>
                 <div class="footer-links">
                     <ul>
@@ -303,19 +306,19 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/talimon-mwakesi-a52b01337" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://wa.me/qr/7MADDXZXMDE7J1" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/talimon-mwakesi-a52b01337" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/qr/7MADDXZXMDE7J1" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Talimon Mwakesi. All rights reserved.</p>
+                <p>&copy; <span id="current-year"></span> Talimon Mwakesi. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#home" class="back-to-top" id="backToTop">
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 

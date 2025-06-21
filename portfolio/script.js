@@ -1,4 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme toggle functionality
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference or use preferred color scheme
+    const savedTheme = localStorage.getItem('theme') || 
+                       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+        if (theme === 'dark') {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+    }
+
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -88,11 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animate elements on scroll
     const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.fade-in, .slide-up');
+        const elements = document.querySelectorAll('.fade-in, .slide-up, .fade-left, .fade-right');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
+            const screenPosition = window.innerHeight / 1.2;
             
             if (elementPosition < screenPosition) {
                 element.classList.add('animated');
@@ -100,6 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Initialize animations and event listeners
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Run once on page load
 });
