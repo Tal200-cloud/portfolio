@@ -945,3 +945,35 @@ footer {
         font-size: 1.2rem;
     }
 }
+/* Add to styles.css */
+.typescript {
+    width: 80%;
+}
+
+.nestjs {
+    width: 80%;
+}
+
+.docker {
+    width: 80%;
+}
+
+.git {
+    width: 90%;
+}
+
+.clickup {
+    width: 85%;
+}
+
+.c-programming {
+    width: 70%;
+}
+
+.accounting-systems {
+    width: 85%;
+}
+
+.office-suite {
+    width: 90%;
+}
