@@ -1,4 +1,3 @@
-// script.js - IMPROVED VERSION
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize loading animation
     const loadingWave = document.createElement('div');
@@ -114,9 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update active nav link
         updateActiveNav();
-        
-        // Trigger animations
-        enhancedAnimateOnScroll();
     });
 
     // Enhanced smooth scrolling with offset
