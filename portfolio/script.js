@@ -174,17 +174,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Stop page from redirecting
             
             const submitBtn = this.querySelector('button[type="submit"]');
             const btnText = submitBtn.querySelector('.btn-text');
             const spinner = submitBtn.querySelector('.loading-spinner');
             
-            // Show loading state
+            // 1. Show loading state
             submitBtn.classList.add('loading');
             submitBtn.disabled = true;
             
-            // Validate form
+            // 2. Validate form
             const inputs = this.querySelectorAll('input[required], textarea[required]');
             let isValid = true;
             
@@ -203,23 +203,40 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.disabled = false;
                 return;
             }
-            
-            // Simulate API call
+
+            // 3. Prepare Form Data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            // 4. Send Actual Request
             try {
-                // Replace with actual form submission
-                await new Promise(resolve => setTimeout(resolve, 2000));
-                
-                showNotification('Message sent successfully!', 'success');
-                this.reset();
+                // Using /ajax/ endpoint to receive a JSON response instead of a redirect
+                const response = await fetch("https://formsubmit.co/ajax/talimonosimel@gmail.com", {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    showNotification('Message sent successfully!', 'success');
+                    this.reset(); // Clear the form
+                } else {
+                    throw new Error('Server responded with an error');
+                }
                 
             } catch (error) {
+                console.error("Submission Error:", error);
                 showNotification('Failed to send message. Please try again.', 'error');
             } finally {
+                // Restore button state
                 submitBtn.classList.remove('loading');
                 submitBtn.disabled = false;
             }
         });
-    }
+    }                      
 
     // Enhanced animations with Intersection Observer
     const observerOptions = {
