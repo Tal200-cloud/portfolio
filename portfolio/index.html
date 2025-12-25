@@ -13,8 +13,9 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="#home">Talimon</a>
+                    <a href="#home">MT<span>.</span></a>
                 </div>
+                
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -22,13 +23,16 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </div>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+
+                <div class="nav-actions">
+                    <div class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -59,11 +63,6 @@
         <div class="container">
             <h2 class="section-title slide-up">About Me</h2>
             <div class="about-content">
-                <div class="about-image fade-left">
-                    <div class="image-wrapper">
-                        <img src="static/talimon.jpeg" alt="Talimon Mwakesi">
-                    </div>
-                </div>
                 <div class="about-text fade-right">
                     <h3>Who I Am</h3>
                     <p>I am a passionate and detail-oriented software engineer with practical experience in building and supporting applications using Python, FastAPI, Flask, NestJS, TypeScript, MySQL, PostgreSQL, SQLite, HTML & CSS, React and foundational knowledge in JavaScript and C. My technical proficiency allows me to design efficient backend solutions, automate workflows, and support data-driven decision-making processes.</p>
@@ -456,30 +455,45 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#home">Talimon</a>
+            <div class="footer-grid">
+                <div class="footer-column brand">
+                    <div class="logo"><a href="#home">MT<span>.</span></a></div>
+                    <p>Software Engineer & Accountant bridging the gap between technical innovation and financial precision.</p>
                 </div>
-                <div class="footer-links">
+
+                <div class="footer-column">
+                    <h4>Navigation</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/talimon-mwakesi-a52b01337" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://wa.me/qr/7MADDXZXMDE7J1" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://github.com/Tal200-cloud" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> talimonosimel@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +254 793 692 407</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column social">
+                    <h4>Follow Me</h4>
+                    <div class="footer-social-icons">
+                        <a href="https://linkedin.com/..." target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/..." target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/..." target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; <span id="current-year"></span> Talimon Mwakesi. All rights reserved.</p>
             </div>
         </div>
-    </footer>
+    </footer>                       
 
     <!-- Back to Top Button -->
     <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
