@@ -240,7 +240,7 @@ body::before {
 }
 
 section {
-    padding: 120px 0;
+    padding: 60px 0;
     position: relative;
     overflow: hidden;
 }
@@ -404,8 +404,8 @@ nav {
 
 /* Enhanced Hero Section */
 .hero {
-    padding-top: 180px;
-    padding-bottom: 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     min-height: 100vh;
     display: flex;
     align-items: center;
