@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl Render site
-        run: curl -s https://mwakesi.onrender.com/ || true
+        run: curl -s https://portfolio-agu7.onrender.com/ || true
