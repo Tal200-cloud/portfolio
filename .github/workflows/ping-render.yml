@@ -3,7 +3,7 @@ name: Ping Render App
 on:
   schedule:
     # Runs every 15 minutes
-    - cron: "*/15 * * * *"
+    - cron: "*/15 8-22 * * *"
   workflow_dispatch: # allows manual trigger
 
 jobs:
