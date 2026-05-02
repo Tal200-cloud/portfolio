@@ -1,0 +1,134 @@
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  margin-top: 20px;
+}
+
+.contactInfo h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.contactInfo p {
+  font-size: 1.1rem;
+  color: var(--gray-color);
+  margin-bottom: 30px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+}
+
+.icon {
+  color: var(--secondary-color);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcon {
+  width: 45px;
+  height: 45px;
+  background: var(--glass-bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  transition: var(--transition);
+  border: 1px solid var(--glass-border);
+}
+
+.socialIcon:hover {
+  background: var(--gradient-1);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.contactForm {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup input, .formGroup textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.formGroup input:focus, .formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.submitBtn {
+  width: 100%;
+  justify-content: center;
+  font-size: 1.1rem;
+  padding: 15px;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.successMsg {
+  margin-top: 20px;
+  color: var(--success-color);
+  text-align: center;
+  font-weight: 600;
+}
+
+.errorMsg {
+  margin-top: 20px;
+  color: var(--danger-color);
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactForm {
+    padding: 25px;
+  }
+}
