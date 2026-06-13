@@ -37,7 +37,7 @@ const About = () => {
                 ))}
               </div>
               
-              <a href="/Mwakesi Osimel.pdf" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <a href="/Mwakesi_Osimel_CV.pdf" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
                 View CV
               </a>
             </div>
