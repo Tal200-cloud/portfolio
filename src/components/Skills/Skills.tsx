@@ -7,17 +7,17 @@ const Skills = () => {
     {
       title: 'Frontend & Design',
       icon: <Layout size={24} />,
-      skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'UI/UX & Canva'],
+      skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML/CSS', 'UI/UX (Canva)'],
     },
     {
       title: 'Backend & DevOps',
       icon: <Server size={24} />,
-      skills: ['Python', 'FastAPI', 'Flask', 'NestJS', 'SQL (Pg/My)', 'Docker'],
+      skills: ['Python', 'Laravel', 'FastAPI', 'NestJS', 'Node.js', 'Docker', 'CI/CD'],
     },
     {
-      title: 'Tools & Others',
-      icon: <Wrench size={24} />,
-      skills: ['Git & GitHub', 'ClickUp', 'Office Suite', 'C Programming', 'Accounting Sys'],
+      title: 'Tools & Databases',
+      icon: <Database size={24} />,
+      skills: ['PostgreSQL', 'MySQL', 'SQLite', 'Odoo (ERP)', 'Git/GitHub', 'Accounting Systems'],
     },
   ];
 

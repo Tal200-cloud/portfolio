@@ -1,0 +1,128 @@
+.experience {
+  padding: 80px 0;
+  position: relative;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 14px;
+  width: 2px;
+  background: var(--glass-border);
+  z-index: 1;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: var(--neon-glow);
+}
+
+.timelineContent {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.timelineContent:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.timelineHeader h3 {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.timelineDate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--glass-bg);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.company {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.pointsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pointsList li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: var(--gray-color);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.pointsList li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .timelineHeader {
+    flex-direction: column;
+  }
+  .timelineDate {
+    align-self: flex-start;
+  }
+}

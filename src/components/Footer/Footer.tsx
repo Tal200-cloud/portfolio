@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -37,7 +38,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a href="https://wa.me/+254793692407" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="WhatsApp">
-                <MessageCircle size={20} />
+                <WhatsAppIcon size={20} />
               </a>
             </div>
           </div>

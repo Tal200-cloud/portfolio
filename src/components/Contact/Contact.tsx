@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, MessageCircle, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Send, Loader2 } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon';
 import styles from './Contact.module.css';
 
 const Contact = () => {
@@ -69,7 +70,7 @@ const Contact = () => {
                   <Linkedin size={20} />
                 </a>
                 <a href="https://wa.me/qr/7MADDXZXMDE7J1" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="WhatsApp">
-                  <MessageCircle size={20} />
+                  <WhatsAppIcon size={20} />
                 </a>
                 <a href="https://github.com/Tal200-cloud" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="GitHub">
                   <Github size={20} />
