@@ -1,15 +1,22 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Projects.module.css';
 
 const projectsData = [
   {
-    title: 'EduSmart Platform',
-    description: 'Solved fragmentation in student tracking by unifying grades, attendance, and coursework into one dashboard. Reduced administrative data entry time by 30%.',
-    image: '/edusmart.png',
+    title: 'Ecommerce SaaS Product',
+    description: 'A robust platform designed to seamlessly connect retailers with producers and wholesalers, optimizing the B2B supply chain.',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     category: 'fullstack',
-    tech: ['Flask', 'Postgres', 'HTML/CSS'],
+    tech: ['Laravel', 'MySQL', 'Next.js'],
+  },
+  {
+    title: 'Property Management SaaS Product',
+    description: 'Comprehensive property management software tailored for rental houses, streamlining tenant billing, maintenance requests, and financial reporting.',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'fullstack',
+    tech: ['Laravel', 'MySQL', 'Next.js'],
   },
   {
     title: 'GWU Attendance System',
@@ -39,50 +46,16 @@ const projectsData = [
     category: 'fullstack',
     tech: ['Odoo 16', 'Python', 'XML'],
   },
-  {
-    title: 'AlgoVista Agency Site',
-    description: 'A high-performance landing page for a digital agency, focusing on CSS animations and responsive mobile design.',
-    image: '/algovista.png',
-    category: 'frontend',
-    tech: ['HTML5', 'CSS3', 'JavaScript'],
-  },
 ];
 
 const Projects = () => {
-  const [filter, setFilter] = useState('all');
-
-  const filteredProjects = filter === 'all' 
-    ? projectsData 
-    : projectsData.filter(project => project.category === filter);
-
   return (
     <section id="projects" className={styles.projects}>
       <div className="container">
         <h2 className="section-title slide-up">Featured Projects</h2>
-        
-        <div className={`${styles.projectsFilter} slide-up`}>
-          <button 
-            className={`${styles.filterBtn} ${filter === 'all' ? styles.active : ''}`}
-            onClick={() => setFilter('all')}
-          >
-            All
-          </button>
-          <button 
-            className={`${styles.filterBtn} ${filter === 'frontend' ? styles.active : ''}`}
-            onClick={() => setFilter('frontend')}
-          >
-            Frontend
-          </button>
-          <button 
-            className={`${styles.filterBtn} ${filter === 'fullstack' ? styles.active : ''}`}
-            onClick={() => setFilter('fullstack')}
-          >
-            Fullstack
-          </button>
-        </div>
 
         <div className={styles.projectsGrid}>
-          {filteredProjects.map((project, index) => (
+          {projectsData.map((project, index) => (
             <div 
               key={index} 
               className={`${styles.projectCard} fade-in`}
