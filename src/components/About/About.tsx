@@ -20,12 +20,10 @@ const About = () => {
             <div className={styles.aboutText}>
               <h3>Who I Am</h3>
               <p>
-                I am a detail-oriented software engineer with practical experience in building applications using Python, FastAPI, Flask, NestJS, and React. 
-                My technical proficiency allows me to design efficient backend solutions, automate workflows, and support data-driven decision-making processes.
+                I am a results-driven Full-Stack Software Engineer specializing in the development of scalable SaaS products, including e-commerce platforms and comprehensive property management software. With a deep proficiency in modern frameworks like React, Next.js, Laravel, and FastAPI, I build robust, high-availability applications supported by streamlined DevOps practices.
               </p>
               <p>
-                Complementing my technical skill set is a solid foundation in accounting and financial management. 
-                This unique combination empowers me to contribute effectively to modern, tech-enabled organizations seeking operational efficiency and digital transformation.
+                What sets me apart is my unique foundation in commerce and accounting. This dual expertise makes me highly adept at translating complex business requirements such as ERP and financial workflows into efficient, automated technical solutions. I am deeply committed to a detail-oriented approach and seamless cross-functional collaboration, ultimately driving tangible business performance through innovative system design.
               </p>
               
               <div className={styles.aboutDetails}>
